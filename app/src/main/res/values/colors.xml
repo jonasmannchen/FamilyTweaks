@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#37474F</color>
+    <color name="primary_dark">#263238</color>
+    <color name="accent">#546E7A</color>
+
+    <color name="status_green">#1B5E20</color>
+    <color name="status_orange">#B26A00</color>
+    <color name="status_red">#B71C1C</color>
+    <color name="status_gray">#616161</color>
+
+    <color name="badge_active_bg">#C8E6C9</color>
+    <color name="badge_available_bg">#FFE0B2</color>
+    <color name="badge_none_bg">#ECEFF1</color>
+    <color name="badge_text">#212121</color>
+
+    <color name="card_background">#F5F7F8</color>
+    <color name="white">#FFFFFF</color>
+</resources>

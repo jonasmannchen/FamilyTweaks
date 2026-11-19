@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FamilyTweaks</string>
+
+    <!-- Eigener Geräteadministrator -->
+    <string name="device_admin_label">FamilyTweaks</string>
+    <string name="device_admin_description">FamilyTweaks nutzt den Geräteadministrator-Status, um vom systemweiten Suspendieren von Apps (DevicePolicyManager.setPackagesSuspended) ausgenommen zu bleiben. Es werden keine Passwort-, Lösch- oder Sicherheitsrichtlinien erzwungen.</string>
+    <string name="own_admin_active">FamilyTweaks: Geräteadministrator AKTIV</string>
+    <string name="own_admin_inactive">FamilyTweaks: Kein aktiver Geräteadministrator</string>
+    <string name="own_admin_hint">Nur als aktiver Geräteadministrator ist FamilyTweaks selbst vor der Android-Paketsuspendierung (setPackagesSuspended) geschützt. Andere Apps können nur über IHREN EIGENEN Receiver geschützt werden.</string>
+    <string name="button_activate_admin">Geräteadministrator aktivieren</string>
+    <string name="button_manage_admin">Administrator verwalten / deaktivieren</string>
+    <string name="own_admin_explanation">FamilyTweaks benötigt den Geräteadministrator-Status, damit Android die App nicht über setPackagesSuspended() suspendieren kann. Es werden keinerlei zusätzliche Sicherheitsrichtlinien angefordert.</string>
+    <string name="foreign_admin_explanation">Android zeigt hier die offizielle Aktivierungsseite für den Geräteadministrator der App „%1$s“. Die App besitzt einen eigenen gültigen Receiver. Die Aktivierung muss im Systemdialog bestätigt werden.</string>
+
+    <!-- Tabs & Liste -->
+    <string name="tab_user_apps">Nutzer-Apps</string>
+    <string name="tab_system_apps">System-Apps</string>
+    <string name="search_hint">App-Name oder Paketname suchen</string>
+    <string name="empty_list">Keine Apps gefunden</string>
+    <string name="tab_summary">Ausgewählt: %1$d · Admin aktiv: %2$d · Aktivierbar: %3$d</string>
+    <string name="tag_disabled">deaktiviert</string>
+    <string name="app_icon_desc">App-Symbol</string>
+    <string name="selection_desc">App auswählen</string>
+
+    <!-- Administrator-Status (exakt drei Zustände) -->
+    <string name="status_admin_active">Geräteadministrator aktiv</string>
+    <string name="status_admin_available">Administrator verfügbar – Aktivierung möglich</string>
+    <string name="status_no_admin">Kein Geräteadministrator vorhanden</string>
+
+    <!-- Dialoge -->
+    <string name="dialog_title">Geräteadministrator-Prüfung</string>
+    <string name="dialog_header">App: %1$s</string>
+    <string name="dialog_active_body">Android meldet für dieses Paket einen AKTIVEN Geräteadministrator. Diese App ist dadurch systemseitig vor der Paketsuspendierung via setPackagesSuspended() geschützt.\n\nHinweis: Dieser Schutz betrifft ausschließlich die Android-Paketsuspendierung. App-Locker, die über Bedienungshilfen (Accessibility), Usage Access oder eigene Overlays arbeiten, können andere Mechanismen verwenden – universelle Immunität gegen alle App-Sperren existiert nicht.</string>
+    <string name="dialog_available_body">Diese App besitzt einen eigenen, vom System akzeptierten Geräteadministrator-Receiver, der aktuell NICHT aktiv ist. Über Androids offizielle Aktivierungsseite kann der Benutzer die Aktivierung anfordern und bestätigen.\n\nWichtig: FamilyTweaks kann fremden Apps keine Administratorrechte verleihen – es wird nur der tatsächlich in der App enthaltene Receiver an das System übergeben.</string>
+    <string name="dialog_none_body">Diese App besitzt KEINEN eigenen Geräteadministrator-Receiver. Mit dieser Methode kann sie nicht geschützt werden: Ein DeviceAdminReceiver gehört immer zu dem Paket, das ihn implementiert; FamilyTweaks kann keinen Receiver für eine fremde App registrieren oder ihr Administratorrechte geben.</string>
+    <string name="dialog_activate">Aktivierung anfordern</string>
+    <string name="error_no_settings_screen">Dieses Android-Gerät stellt keine Geräteadministrator-Aktivierungsseite bereit.</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Required from Android 11 (API 30) on to enumerate ALL installed packages
+        of the current user via PackageManager. The app is distributed outside
+        Google Play; see README.md for the honest limitations of this permission.
+    -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FamilyTweaks">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            FamilyTweaks' own device admin receiver.
+
+            BIND_DEVICE_ADMIN is a signature-level permission held by the
+            Android SYSTEM: it allows the system to bind to this receiver.
+            It is an attribute of the <receiver> tag, NOT a <uses-permission>
+            that the user could ever grant.
+
+            The DEVICE_ADMIN_ENABLED intent filter lets the system notify the
+            app when its admin component is enabled or disabled.
+        -->
+        <receiver
+            android:name=".admin.FamilyTweaksAdminReceiver"
+            android:description="@string/device_admin_description"
+            android:label="@string/device_admin_label"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.device.admin"
+                android:resource="@xml/device_admin_receiver" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
