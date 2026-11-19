@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- FamilyTweaks launcher foreground: a simple shield on transparent bg. -->
+    <path
+        android:fillColor="#37474F"
+        android:pathData="M54,26 L76,34 L76,54 C76,68 67,78 54,84 C41,78 32,68 32,54 L32,34 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,36 L68,41 L68,54 C68,63 63,69 54,73 C45,69 40,63 40,54 L40,41 Z" />
+    <path
+        android:fillColor="#546E7A"
+        android:pathData="M50,50 h8 v10 h-8 z M47,47 h14 v4 h-14 z" />
+</vector>

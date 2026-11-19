@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Device administration policy file for FamilyTweaksAdminReceiver.
+
+    Deliberately MINIMAL: no wipe, no password reset, no lock-now, no
+    force-lock, no network reset, no camera/storage restrictions.
+
+    The "watch" flags only make the Android system notify THIS app when
+    device-admin state changes happen (own activation/deactivation and,
+    on recent Android versions, other admins being added/removed). They
+    grant no power over other apps at all.
+-->
+<device-admin xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-policies>
+        <watch-active />
+        <watch-device-admin-added-removed />
+    </uses-policies>
+</device-admin>
